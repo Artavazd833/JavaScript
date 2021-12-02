@@ -13,6 +13,6 @@ function addElement () {
   newDiv.appendChild(newContent);
 
   // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementsByTagName("div");
+  const currentDiv = document.getElementsByTagName("div1S");
   document.body.insertBefore(newDiv, currentDiv);
 }
