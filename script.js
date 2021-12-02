@@ -3,16 +3,25 @@ document.getElementById('demo').innerHTML='Hello World';
 document.body.onload = addElement;
 
 function addElement () {
-  // create a new div element
   const newDiv = document.createElement("div");
-
-  // and give it some content
   const newContent = document.createTextNode("Hi there and greetings!");
-
-  // add the text node to the newly created div
   newDiv.appendChild(newContent);
-
-  // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementsByTagName("div1S");
+  const currentDiv = document.getElementById("div");
   document.body.insertBefore(newDiv, currentDiv);
 }
+
+let arr =  [1,2,3, 'apple'];
+arr.push(4);
+console.log(arr);
+document.getElementById('demo').innerHTML=arr;
+for(let i= 0 ; i<6; i++){
+    let newDiv = document.createElement("div");
+    let content = document.createTextNode(arr[i]);
+    newDiv.appendChild(content);
+    let currentDiv = document.getElementById("div");
+    document.body.insertBefore(newDiv, currentDiv);
+    newDiv.className = 'foo'+ i;
+
+}
+
+
